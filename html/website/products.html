@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Store - Products</title>
+    <!-- Other meta tags and title -->
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"-->
+    
+    <!--<link rel="stylesheet" href="css/styles.css">-->
+    <style>
+        /* CSS styles for the navigation bar */
+        header {
+            background-color: #007bff; /* Light blue color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            color: #0056b3; /* Darker blue color on hover */
+        }
+
+        /* Product card styles */
+        .product-card {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-details h3 {
+            margin-top: 0;
+        }
+
+        .product-details p {
+            color: #333;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    /* Cart icon */
+    .cart-icon {
+            position: relative;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laptop Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-icon">🛒<span class="cart-count" id="cartCount">0</span></a></li>
+           
+                <!--li><a href="#"><i class="fas fa-shopping-cart"></i></a></li--> <!-- Cart icon -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSQxXnyiXzBTAIv5bK2ED___Zf_5T0Um83CyTU96kA_ZGdk5m02jcA9FQuxqlptsJ7MJzV4QRZUN_-0FpfvCyC2wQke6viHuPNcIqADlF3nljGpqyOsF9A8" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 2</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 2', 'Description of Laptop 2')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://dressland.co.in/wp-content/uploads/2022/09/photo-1617137968427-85924c800a22.jpeg" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 3</h3>
+                    <p>Description of Laptop 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 3', 'Description of Laptop 3')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/7/ZW/DY/RA/133215290/mens-wear.jpg" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>  <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://isufashion.com/cdn/shop/files/4copy.jpg?v=1684394344&width=800" alt="Laptop 1">
+                <div class="product-details">
+                    <h3>Laptop 1</h3>
+                    <p>Description of Laptop 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="btn" onclick="addToCart('Laptop 1', 'Description of Laptop 1')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more product cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Laptop Store. All rights reserved.</p>
+    </footer>
+    <script>
+        function addToCart(productName, description) {
+            // Get the cart items from localStorage
+            let cartItems = localStorage.getItem('cartItems');
+    
+            // Parse the cart items into an array or initialize an empty array if it's null
+            cartItems = cartItems ? JSON.parse(cartItems) : [];
+    
+            // Add the new item to the cart
+            cartItems.push({ productName, description });
+    
+            // Save the updated cart items back to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+            // Update the cart count in the cart icon
+            updateCartCount(cartItems.length);
+        }
+    
+        function updateCartCount(count) {
+            document.getElementById('cartCount').innerText = count;
+        }
+    
+        function displayCartItems() {
+            // Get the cart items from localStorage
+            let cartItems = localStorage.getItem('cartItems');
+    
+            // Parse the cart items into an array or return if it's null
+            if (!cartItems) return;
+            cartItems = JSON.parse(cartItems);
+    
+            // Get the container where cart items will be displayed
+            const cartContainer = document.getElementById('cartContainer');
+    
+            // Clear any existing content in the container
+            cartContainer.innerHTML = '';
+    
+            // Loop through the cart items and generate HTML to display each item
+            cartItems.forEach(item => {
+                const productHTML = `
+                    <div>
+                        <h3>${item.productName}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                `;
+                cartContainer.innerHTML += productHTML;
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>

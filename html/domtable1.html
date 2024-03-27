@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table with Values</title>
+    <style>
+       
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        
+
+       
+    </style>
+</head>
+<body>
+    <div id="table-container">
+     
+    </div>
+
+    <script>
+        
+        function createTable(data) {
+            var table = document.createElement("table");
+
+            var headerRow = table.insertRow(0);
+            var header1 = headerRow.insertCell(0);
+            var header2 = headerRow.insertCell(1);
+
+            header1.innerHTML = "Name";
+            header2.innerHTML = "Marks";
+
+            for (var i = 0; i < data.length; i++)
+             {
+                var row = table.insertRow(i + 1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                cell1.innerHTML = data[i].value1;
+                cell2.innerHTML = data[i].value2;
+            } 
+
+            document.getElementById("table-container").appendChild(table);
+        }
+
+       
+        var data = [
+            { value1: "teja", value2: "20" },
+            { value1: "teju", value2: "30" },
+            { value1: "tejs", value2: "40" }
+        ];
+
+        createTable(data);
+    </script>
+</body>
+</html>

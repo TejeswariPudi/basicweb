@@ -1,0 +1,90 @@
+@charset "UTF-8";
+body{
+	
+
+   background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20230518/pngtree-coffee-cup-with-a-light-behind-it-image_2533794.png');
+	background-size:cover;
+	background-attechment:fixed;
+	background-repeat:no repeat;
+
+	
+
+	font-family:'poppins',sans-serif;
+}
+nav{
+	display:flex;
+	justify-content:space-between;
+	color:White;
+	margin-left:28px;
+	font-size:26px;
+}
+
+ul{
+	display:flex;
+}
+ul li{
+	list-style:none;
+	margin-inline:30px;
+}
+.form .link
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a
+{
+    text-decoration: none;
+    color: #ff7200;
+}
+.form input:focus
+{
+    outline: none;
+}
+.form input
+{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form
+{
+	
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 200px;
+    left: 1100px;
+    transform: translate(0%,-5%);
+    border-radius: 5px;
+    padding: 25px;
+    
+}
+.qu
+{
+	display:flex;
+	justify-content:space-between;
+	color:#F4ECDC;
+	margin-left:30px;
+	font-size:26px;
+}
+.im
+{
+
+	display:flex;
+	justify-content:space-between;
+	color:#F4ECDC;
+	margin-left:30px;
+	font-size:26px;	
+}

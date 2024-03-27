@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <!-- Header content -->
+    </header>
+
+    <main>
+        <section id="cartContainer">
+            <!-- Cart items will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Script to display and remove cart items -->
+    <script>
+      function displayCartItems() {
+    // Get the cart items from localStorage
+    let cartItems = localStorage.getItem('cartItems');
+
+    // Parse the cart items into an array or return if it's null
+    if (!cartItems) return;
+    cartItems = JSON.parse(cartItems);
+
+    // Get the container where cart items will be displayed
+    const cartContainer = document.getElementById('cartContainer');
+
+    // Clear any existing content in the container
+    cartContainer.innerHTML = '';
+
+    // Loop through the cart items and generate HTML to display each item
+    cartItems.forEach((item, index) => {
+        const productHTML = `
+            <div>
+                <img src="${item.image}" alt="${item.productName}">
+                <h3>${item.productName}</h3>
+                <p>${item.description}</p>
+                <button onclick="removeCartItem(${index})">Remove</button>
+            </div>
+        `;
+        cartContainer.innerHTML += productHTML;
+    });
+
+    // Update the cart count
+    updateCartCount(cartItems.length);
+}
+
+
+        function removeCartItem(index) {
+            // Get the cart items from localStorage
+            let cartItems = localStorage.getItem('cartItems');
+
+            // Parse the cart items into an array or return if it's null
+            if (!cartItems) return;
+            cartItems = JSON.parse(cartItems);
+
+            // Remove the item at the specified index
+            cartItems.splice(index, 1);
+
+            // Update the cart items in localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Update the display of cart items
+            displayCartItems();
+
+            // Update the cart count by decrementing it by 1
+            updateCartCount(cartItems.length);
+        }
+
+        function updateCartCount(count) {
+            // Update the cart count
+            document.getElementById('cartCount').innerText = count;
+        }
+
+        // Call the displayCartItems function when the page loads
+        window.onload = displayCartItems;
+    </script>
+</body>
+</html>

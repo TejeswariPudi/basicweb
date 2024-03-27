@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Button</title>
+ 
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bubble-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: bubble 0.5s ease-out;
+}
+
+@keyframes bubble {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<button class="bubble-btn" onclick="animateBubble(this)">Click Me!</button>
+<script>
+function animateBubble(button) {
+  const bubble = document.createElement('span');
+  bubble.classList.add('bubble');
+  button.appendChild(bubble);
+
+  bubble.addEventListener('animationend', () => {
+    button.removeChild(bubble);
+  });
+}
+
+</script>
+
+
+</body>
+</html>

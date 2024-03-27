@@ -1,0 +1,64 @@
+.div1{
+    margin-left:650px;
+    margin-right:10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.display-box{
+    border:solid block 0.5px;
+    width:99%;
+    height:100%;
+
+
+}
+.btn[value="C"]{
+    font-size:20px;
+}
+.btn[value="1"]{
+    font-size:20px;
+}
+.btn[value="2"]{
+    font-size:20px;
+}
+.btn[value="3"]{
+    font-size:20px;
+}
+.btn[value="/"]{
+    font-size:20px;
+}
+.btn[value="4"]{
+    font-size:20px;
+}
+.btn[value="5"]{
+    font-size:20px;
+}
+.btn[value="6"]{
+    font-size: 20px;
+}
+.btn[value="-"]{
+    font-size:20px;
+}
+.btn[value="7"]{
+    font-size:20px;
+}
+.btn[value="8"]{
+    font-size:20px;
+}
+.btn[value="9"]{
+    font-size:20px;
+}
+.btn[value="+"]{
+    font-size:20px;
+}
+.btn[value="."]{
+    font-size:20px;
+}
+.btn[value="0"]{
+    font-size:20px;
+}
+.btn[value="="]{
+    font-size:20px;
+}
+.btn[value="*"]{
+    font-size:20px;
+}

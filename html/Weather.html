@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #weather-container {
+      margin-top: 50px;
+    }
+
+    #city-input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    #get-weather-btn {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #get-weather-btn:hover {
+      background-color: #45a049;
+    }
+
+    #weather-info {
+      display: inline-block;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    #weather-info h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    #weather-info p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    #related-locations {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    #related-locations ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #related-locations li {
+      cursor: pointer;
+      margin-bottom: 5px;
+      color: #666;
+      transition: color 0.3s;
+    }
+
+    #related-locations li:hover {
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>Static Weather App</h1>
+  <div id="weather-container">
+    <input type="text" id="city-input" placeholder="Enter city" oninput="showRelatedLocations()">
+    <button id="get-weather-btn" onclick="getWeather()">Get Weather</button>
+    <div id="weather-info"></div>
+    <div id="related-locations"></div>
+  </div>
+
+  <script>
+    const cities = ["New York", "London", "Tokyo", "Paris", "Sydney", "Los Angeles", "Berlin", "Moscow", "Beijing", "Rome"];
+
+    function showRelatedLocations() {
+      const input = document.getElementById("city-input").value.toLowerCase();
+      const relatedLocations = cities.filter(city => city.toLowerCase().includes(input));
+      const relatedLocationsDiv = document.getElementById("related-locations");
+      relatedLocationsDiv.innerHTML = "";
+      if (relatedLocations.length > 0) {
+        const ul = document.createElement("ul");
+        relatedLocations.forEach(city => {
+          const li = document.createElement("li");
+          li.textContent = city;
+          li.onclick = function() {
+            document.getElementById("city-input").value = city;
+            relatedLocationsDiv.innerHTML = "";
+          };
+          ul.appendChild(li);
+        });
+        relatedLocationsDiv.appendChild(ul);
+      }
+    }
+
+    function getWeather() {
+      const city = document.getElementById("city-input").value;
+      let mockWeatherData;
+
+      // Provide mock weather data based on city
+      switch (city.toLowerCase()) {
+        case "new york":
+          mockWeatherData = {
+            cityName: "New York",
+            temperature: Math.floor(Math.random() * 30) + 10, // Random temperature between 10°C and 40°C
+            weatherDescription: "Partly cloudy"
+          };
+          break;
+        case "london":
+          mockWeatherData = {
+            cityName: "London",
+            temperature: Math.floor(Math.random() * 30) + 10,
+            weatherDescription: "Rainy"
+          };
+          break;
+        case "tokyo":
+          mockWeatherData = {
+            cityName: "Tokyo",
+            temperature: Math.floor(Math.random() * 30) + 10,
+            weatherDescription: "Sunny"
+          };
+          break;
+        default:
+          mockWeatherData = {
+            cityName: city,
+            temperature: Math.floor(Math.random() * 30) + 10,
+            weatherDescription: "Cloudy"
+          };
+      }
+
+      const weatherInfo = document.getElementById("weather-info");
+      weatherInfo.innerHTML = `
+        <h2>${mockWeatherData.cityName}</h2>
+        <p>Temperature: ${mockWeatherData.temperature}°C</p>
+        <p>Weather: ${mockWeatherData.weatherDescription}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

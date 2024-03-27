@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shoes Website </title>
+    <!-- font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+     <!--custom css file link  -->
+     <link rel="stylesheet" href="shoes .css">
+    </head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-shoe-prints"></i> shoes</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#products">products</a>
+            <a href="#featured">featured</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="search here...">
+            <label class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <div class="slides-container">
+            
+            <div class="slide active">
+                <div class="content">
+                    <span>new winter</span>
+                    <h3>shoes collection</h3>
+                    <p>The Most Wonderful Brands of the Year the retail sale of men's, women's, and children's footwear, including athletic footwear.</p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="header-1.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>new winter</span>
+                    <h3>shoes collection</h3>
+                    <p>Sneaker Motivation
+                        Oh hey goals: prepare to be crushed.</p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="header-2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="slide-next" onclick="next()" class="fas fa-angle-right"></div>
+        <div id="slide-prev" onclick="prev()" class="fas fa-angle-left"></div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- latest product section starts -->
+
+    <section class="products" id="products">
+
+        <h1 class="heading"><span>latest</span> products</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike shoes</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Brooks</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Skechers</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>adidas</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nike</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="product-6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Bearpaw</h3>
+                    <div class="price">$170.00</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- latest product section ends -->
+
+    <!-- banner section starts -->
+
+    <section class="banner-container">
+
+        <div class="banner">
+            <img src="banner1.jpg" alt="">
+            <div class="content">
+                <span>limited offer</span>
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="banner2.jpg" alt="">
+            <div class="content">
+                <span>limited offer</span>
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- banner section ends -->
+
+    <!-- featured product section starts -->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>featured</span> products</h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price">₹ 7 495.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price">₹ 11 895.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price">₹ 10 795.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price"> ₹ 7 195.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-5.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price"> ₹ 11 495.00</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="product-6.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>nike shoes</h3>
+                        <div class="price">₹ 8 495.00/div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </section>
+
+    <!-- featured product section ends -->
+
+    <!-- review section starts -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"><span>client's</span> review</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-1.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Harika</h3>
+                    <p>Love it
+                        I‘ve just received my second pair of shoes. So my only problem is to decide which one to wear. Do I have to say more?
+                        Btw, I’ll wear them with the green laces not only on St.Patrick‘s Day</p></div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-2.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Jordan</h3>
+                    <p>Beautiful, very well-made shoes!
+                        I love my new das cognac shoes and I’ve tried to follow the new-shoes advice of not wearing them every day at first, but that’s tough! -- They’re really pretty and they go with all of my clothes.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-3.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Robert</h3>
+                    <p>I love my new Whiskey the Wonder Boots. They are perfect.
+
+                        I've had a pair of Das Sneakers for a while, and they have been great. I've worn them everywhere for the past 3 years. I wanted to take my athiesm to the next level, so I bought a pair of Whiskey the Wonder Boots two weeks ago. I can't say enough about them. I love a good pair of shoes, but these boots are the best I've ever had.</p></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- send gift section starts -->
+
+    <section class="send">
+
+        <div class="container">
+
+            <div class="content">
+                <h2 class="title">send gift now&nbsp&nbsp<i class="fas fa-gift"></i></h2>
+                <p>Now you can send gift through online by sitting at home Order Now&nbsp&nbsp<i class="fas fa-gift"></i></p>
+                <form action="">
+                    <input type="text" class="input" placeholder="House Address">
+                    <a href="#" class="btn">send</a>
+                </form>
+            </div>
+            <div class="image">
+                <img src="pics/Send gift.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- send gift section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us <i class="fas fa-heart"></i></h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="pics/contact.png" alt="">
+            </div>
+
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Your Number">
+                    <input type="text" placeholder="Your Subject">
+                </div>
+                <textarea placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>Building trust with Integrity. At Shoes, every decision made is based on ethical and moral principles - no success is meaningful if it’s not achieved the right way.</p>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#">pricing</a>
+                <a href="#">discount</a>
+                <a href="#">refund policy</a>
+                <a href="#">shipping mode</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">products</a>
+                <a href="#">featured</a>
+                <a href="#">review</a>
+            </div>
+
+            <div class="box">
+                <h3>social links</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--section class="credit">
+         Designed By Tejeswari
+    </section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- swiper js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="shoes.js"></script>
+</body>
+</html>

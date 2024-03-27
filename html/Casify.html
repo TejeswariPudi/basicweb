@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Casify  </title>
+    <!-- font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+     <!--custom css file link  -->
+     <link rel="stylesheet" href="Casify.css">
+    </head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-laptop"></i> Casify</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Latest Products</a>
+            <a href="#featured">featured Products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="search here...">
+            <label class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <div class="slides-container">
+            
+            <div class="slide active">
+                <div class="content">
+                    <span></span>
+                    <h3>Exclusive on Casify collection</h3>
+                    <p></p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="pics/delllaptop.webp" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span></span>
+                    <h3> Casify collection</h3>
+                    <p>Are you looking for a good laptop but don't want to spend a lot of money?<br>   You're in luck! <br>Your at good place where you can buy  your favourite laptop in your budget</p>
+                    <button class="btn">
+                        <span>shop now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="pics/tejahomelaptop1.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="slide-next" onclick="next()" class="fas fa-angle-right"></div>
+        <div id="slide-prev" onclick="prev()" class="fas fa-angle-left"></div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- latest product section starts -->
+
+    <section class="products" id="products">
+
+        <h1 class="heading"><span>latest</span> products</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/Acer.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Acer </h3><p>Intel Celeron Dual Core<br> N4500 - (8 GB/128 GB SSD/Chrome OS) ...</p>
+                    <div class="price">₹25,490</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/tejaDell.avif" alt="">
+                </div>
+                <div class="content">
+                    <h3>DELL</h3><p>Intel Core i3 12th Gen 1215U <br>- (8 GB/512 GB SSD/Windows 11 Home)<br> New Inspiron 15 Laptop Thin and Light Laptop  <br>(38 cm, Carbon Black, 1.65 Kg, With MS Office)</p>
+                    <div class="price">₹36,990</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/tejaSamsung.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>SAMSUNG Galaxy  </h3><p> Intel Core i5 12th Gen 1235U<br> - (16 GB/512 GB SSD/Windows 11 Home) <br>NP550 Thin and Light Laptop <br> (15.6 Inch, Graphite, 1.80 Kg, With MS Office)</p>
+                    <div class="price">₹48,990</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/tejaLenovo.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Lenovo </h3><p>Intel Celeron Dual Core N4020<br> - (4 GB/64 GB EMMC Storage/Chrome OS) <br>ideapad 3 cb 11igl05 2 Chromebook<br>  (11.6 Inch, Onyx Black, 1.12 kg)</p>
+                    <div class="price">₹17,890</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/tejalaptop1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>HP</h3><p>Intel Intel Core i3 11th Gen 1115G4<br> - (8 GB/256 GB SSD/Windows 11 Home)<br> 14s - dy2507TU Thin and Light Laptop <br> (14 inch, Natural Silver, 1.41 Kg, With MS Office)</p>
+                    <div class="price">₹31,990</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/tejaAsus.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>ASUS</h3><p>Intel Core i5 11th Gen 1135G7 <br>- (8 GB/512 GB SSD/Windows 11 Home)<br> X515EA-EJ522WS Thin and Light Laptop <br> (15.6 Inch, Transparent Silver, 1.80 kg, With MS Office)</p>
+                    <div class="price">₹43,990</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- latest product section ends -->
+
+    <!-- banner section starts -->
+<br>
+<br>
+    <section class="banner-container">
+
+        <div class="banner">
+            <img src="pics/tejabanner5.jpg" alt="">
+            <div class="content">
+                <span>limited offer</span  >
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="pics/tejabanner10.webp" alt="">
+            <div class="content">
+                <span>limited offer</span>
+                <h3>upto 40% off</h3>
+                <button class="btn">
+                    <span>shop now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+     <!--banner section ends -->
+
+    <!-- featured product section starts -->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>featured</span> products</h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/Acer.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Acer</h3>
+                        <div class="price">₹25,490</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/tejaAsus.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>DELL</h3>
+                        <div class="price">₹36,990</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/tejaDell.avif" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>SAMSUNG Galaxy</h3>
+                        <div class="price">₹48,990</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/tejalaptop1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Lenovo</h3>
+                        <div class="price"> ₹17,890</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/tejaLenovo.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>HP</h3>
+                        <div class="price"> ₹31,990</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="pics/tejaSamsung.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>ASUS</h3>
+                        <div class="price">₹43,990</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </section>
+
+    <!-- featured product section ends -->
+
+    <!-- review section starts -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"><span>client's</span> review</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-1.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Harika</h3>
+                    <p>Love it
+                        A worth buying, outstanding laptop for gaming, able to play on very high graphics easily for pubg and apex legends. Just installed Geforce driver software and it works like charm. We have to update the graphics drivers through geforce software and start any game from there itself. Then we will see the best performance.</p></div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-2.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Jordan</h3>
+                    <p>It's Good
+                        I purchased this laptop for the trading and editing purpose bt the display is the high graphics</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="pics/pic-3.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Robert</h3>
+                    <p>This is the best laptop for students.
+                      Product is good and so fast deliver in 24 hurs thank you Casify</p></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- send gift section starts 
+
+    <section class="send">
+
+        <div class="container">
+
+            <div class="content">
+                <h2 class="title">send gift now&nbsp&nbsp<i class="fas fa-gift"></i></h2>
+                <p>Now you can send gift through online by sitting at home Order Now&nbsp&nbsp<i class="fas fa-gift"></i></p>
+                <form action="">
+                    <input type="text" class="input" placeholder="House Address">
+                    <a href="#" class="btn">send</a>
+                </form>
+            </div>
+            <div class="image">
+                <img src="Send gift.png" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+     <send gift section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us <i class="fas fa-heart"></i></h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="pics/contact.png" alt="">
+            </div>
+
+            <form action="">
+                <h3>get in touch <i class="fas fa-smile"></i></h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Your Number">
+                    <input type="text" placeholder="Your Subject">
+                </div>
+                <textarea placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>about us</h3>
+                <p>Building trust with Integrity. At Casify, every decision made is based on ethical and moral principles - no success is meaningful if it’s not achieved the right way.</p>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#">pricing</a>
+                <a href="#">discount</a>
+                <a href="#">refund policy</a>
+                <a href="#">shipping mode</a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">Latest products</a>
+                <a href="#">featured Products</a>
+                <a href="#">review</a>
+            </div>
+
+            <div class="box">
+                <h3>social links</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--section class="credit">
+         Designed By Tejeswari
+    </section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- swiper js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="Casify.js"></script>
+</body>
+</html>

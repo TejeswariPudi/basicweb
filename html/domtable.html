@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Table with DOM Manipulation</title>
+</head>
+<body>
+  <div id="table-container"></div>
+
+  <script>
+   
+    const container = document.getElementById("table-container");
+
+  
+    const table = document.createElement("table");
+    table.border = "1"; 
+
+    for (let i = 0; i < 10; i++) {
+      const row = document.createElement("tr");
+      for (let j = 0; j < 10; j++) {
+        const cell = i === 0 && j === 0 ? document.createElement("th") : document.createElement("td");
+        const text = document.createTextNode(`Row ${i + 1}, Cell ${j + 1}`);
+        cell.appendChild(text);
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+
+  
+    container.appendChild(table);
+  </script>
+</body>
+</html>
